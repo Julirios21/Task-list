@@ -2,8 +2,16 @@ function addTask() {
     let taskInput = document.getElementById("task");
     let taskText = taskInput.value.trim();
 
+    function mostarAlerta(){
+        Swal.fire({
+            title: "Error",
+            text: "Ingrese una Task",
+            icon: "Error"
+        })
+    }
+
     if (taskText === "") {
-        alert("Escribe una tarea.");
+        mostarAlerta();
         return;
     }
 
@@ -26,3 +34,10 @@ function toggleTask(element) {
 function removeTask(button) {
     button.parentElement.remove();
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("btn").addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+        document.body.classList.toggle("light");
+    });
+});
