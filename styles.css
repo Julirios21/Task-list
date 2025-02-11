@@ -10,6 +10,11 @@ body.dark {
     background-color: #000000ec;
 }
 
+body.dark a {
+    color: white; /* Cambia el color del enlace en modo oscuro */
+    text-decoration: none; /* Opcional: Quita el subrayado */
+}
+
 
 .container {
     width: 50%;
@@ -76,6 +81,22 @@ li {
     align-items: center;
     border: 1px solid #ddd;
     border-radius: 5px;
+}
+
+footer{
+    margin-top: 30px;
+}
+a {
+    color: rgb(82, 13, 13);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#linkedin:hover{
+    color: #0e76a8;
+}
+#github:hover{
+    color: #ab86cd;
 }
 
 .completed {
